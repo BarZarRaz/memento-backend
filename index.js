@@ -7,7 +7,7 @@ global.Task = require("./api/models/task.model");
 global.User = require("./api/models/user.model");
 global.Goal = require("./api/models/goal.model");
 global.Note = require("./api/models/note.model");
-global.Action = require("./api/models/Action.model");
+global.Action = require("./api/models/action.model");
 global.Question = require("./api/models/question.model");
 
 const userRoute = require("./api/routes/user.route");
