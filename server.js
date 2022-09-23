@@ -30,6 +30,9 @@ authRoute(app);
 userRoute(app);
 taskRoute(app);
 
+app.route("/").get((req, res) => {
+  res.send("Hello World!");
+});
 app.listen(port);
 
 app.use((req, res) => {
