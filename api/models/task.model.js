@@ -14,7 +14,13 @@ const taskSchema = new Schema(
         finished: {
             type: Boolean
         },
-        due: {
+        finishedTime: {
+            type: Date
+        },
+        createdTime: {
+            type: Date
+        },
+        dueTime: {
             type: Date,
             required: 'due cannot be blank'
         },

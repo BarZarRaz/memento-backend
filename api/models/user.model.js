@@ -4,9 +4,16 @@ const { Schema } = mongoose
 
 const userSchema = new Schema(
     {
-        profile: {
-            type: Schema.Types.ObjectId,
-            ref: 'Profile'
+        name: {
+            type: String,
+            required: 'name cannot be blank'
+        },
+        age: {
+            type: Number,
+            required: 'age cannot be blank'
+        },
+        profilePicture: {
+            type: String
         },
         googleId: {
             type: String

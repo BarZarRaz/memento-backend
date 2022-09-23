@@ -4,7 +4,7 @@ const { Schema } = mongoose
 
 const goalSchema = new Schema(
     {
-        title: {
+        name: {
             type: String,
             required: 'name cannot be blank'
         },
