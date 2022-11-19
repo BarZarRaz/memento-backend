@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { stringifyQuery } = require("vue-router");
 
 const { Schema } = mongoose;
 
@@ -39,8 +40,7 @@ const userSchema = new Schema(
     },
     actions: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "action",
+        type: String,
       },
     ],
     questions: [

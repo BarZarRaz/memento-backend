@@ -18,7 +18,9 @@ exports.create_a_task = async (req, res) => {
     const user = await User.findByIdAndUpdate(
       userId,
       {
-        $push: { tasks: task._id },
+        $push: { tasks: task._id,
+        actions: "create_task_"+task._id,
+        },
       },
       { new: true }
     );
@@ -64,3 +66,22 @@ exports.delete_a_task = async (req, res) => {
     });
   });
 };
+/*
+exports.done_a_task = async (req, res) => {
+  const userId = req.params.userId;
+  const taskId = req.params.taskId;
+
+    await User.findByIdAndUpdate(
+      userId,
+      {
+        $pull: { tasks: taskId },
+      },
+      { new: true }
+    );
+    res.json({
+      message: "task succesfully done",
+      _id: req.params.taskId,
+    });
+
+};
+*/

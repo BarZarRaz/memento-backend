@@ -9,4 +9,7 @@ module.exports = (app) => {
     .get(taskBuilder.read_a_task)
     .put(taskBuilder.update_a_task)
     .delete(taskBuilder.delete_a_task);
+  app
+    .route("/users/:userId/tasks/:taskId/done")
+    .get(taskBuilder.done_a_task)
 };
