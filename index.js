@@ -15,6 +15,7 @@ const taskRoute = require("./api/routes/task.route");
 const authRoute = require("./api/routes/auth.route");
 const questionRoute = require("./api/routes/question.route");
 const noteRoute = require("./api/routes/note.route");
+const goalRoute = require("./api/routes/goal.route");
 
 mongoose.connect(
   "mongodb+srv://djfrosterice:Ice37872@cluster0.w8kqktk.mongodb.net/?retryWrites=true&w=majority",
@@ -28,6 +29,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+goalRoute(app);
 noteRoute(app);
 questionRoute(app);
 authRoute(app);
