@@ -61,7 +61,7 @@ const userSchema = new Schema(
         ref: "goal",
       },
     ],
-    task: [
+    tasks: [
       {
         type: Schema.Types.ObjectId,
         ref: "task",

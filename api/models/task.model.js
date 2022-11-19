@@ -21,8 +21,7 @@ const taskSchema = new Schema(
             type: Date
         },
         dueTime: {
-            type: Date,
-            required: 'due cannot be blank'
+            type: Date
         },
         taskImage: [
             {
