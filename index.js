@@ -13,6 +13,7 @@ global.Question = require("./api/models/question.model");
 const userRoute = require("./api/routes/user.route");
 const taskRoute = require("./api/routes/task.route");
 const authRoute = require("./api/routes/auth.route");
+const questionRoute = require("./api/routes/question.route");
 
 mongoose.connect(
   "mongodb+srv://djfrosterice:Ice37872@cluster0.w8kqktk.mongodb.net/?retryWrites=true&w=majority",
@@ -26,6 +27,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+questionRoute(app);
 authRoute(app);
 userRoute(app);
 taskRoute(app);
